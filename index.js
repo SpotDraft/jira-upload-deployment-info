@@ -75,7 +75,8 @@ async function submitDeploymentInfo(accessToken) {
         // console.log("joined errors: ", errors);
         core.setFailed(errors);
     }
-    core.setOutput("response", responseJson);
+    process.env['response'] = responseJson;
+    //core.setOutput("response", responseJson);
 }
 exports.submitDeploymentInfo = submitDeploymentInfo;
 (async function () {
