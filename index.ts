@@ -85,7 +85,8 @@ async function submitDeploymentInfo(accessToken: any) {
         core.setFailed(errors);
     }
 
-    core.setOutput("response", responseJson);
+    //core.setOutput("response", responseJson);
+    process.env['response'] = responseJson;
 }
 
 (async function () {
